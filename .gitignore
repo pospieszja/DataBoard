@@ -1,0 +1,16 @@
+
+# Created by https://www.gitignore.io/api/visualstudiocode,bower
+### My Own ###
+bin
+obj
+
+### Bower ###
+bower_components
+.bower-cache
+.bower-registry
+.bower-tmp
+
+### VisualStudioCode ###
+.vscode
+
+# End of https://www.gitignore.io/api/visualstudiocode,bower
