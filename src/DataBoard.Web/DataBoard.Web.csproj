@@ -11,4 +11,5 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.1.2" />
     <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.1.1" />
   </ItemGroup>
+  <Import Project="..\DataBoard.Infrastructure\DataBoard.Infrastructure.csproj"/>
 </Project>
