@@ -1,6 +1,5 @@
 # DataBoard
 ["Get noticed 2017!" contest](http://dajsiepoznac.pl/)
-
 [Blog posts about project](https://blog.pospieszynski.net/)
 
 ## Description
