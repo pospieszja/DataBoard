@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataBoard.Infrastructure.Mapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -18,7 +19,8 @@ namespace DataBoard.Web
         {
             // services.AddTransient<IUserRepository, MockUserRepository>();
             // services.AddTransient<IDatabaseRepository, MockDatabaseRepository>();
-            services.AddMvc();            
+            services.AddMvc();        
+            services.AddSingleton(AutoMapperConfig.Initialize());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
