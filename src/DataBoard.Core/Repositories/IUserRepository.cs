@@ -4,7 +4,7 @@ using DataBoard.Core.Domain;
 
 namespace DataBoard.Core.Repositories
 {
-    public interface IUserIntefrace
+    public interface IUserRepository
     {
          User Get(Guid userId);
          User Get(string email);
