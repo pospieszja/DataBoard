@@ -13,9 +13,9 @@ namespace DataBoard.Core.Domain
 
         public User()
         {
-            
+
         }
-        
+
         public User(string email, string password)
         {
             Id = Guid.NewGuid();
@@ -66,5 +66,4 @@ namespace DataBoard.Core.Domain
             UpdatedAt = DateTime.UtcNow;
         }
     }
-
 }
