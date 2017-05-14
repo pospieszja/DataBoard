@@ -7,5 +7,6 @@ namespace DataBoard.Infrastructure.Services
     {
         IEnumerable<UserDto> GetAll();
         UserDto Get(string email);
+        void Register(string email, string password);
     }
 }

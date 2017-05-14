@@ -29,5 +29,18 @@ namespace DataBoard.Infrastructure.Services
             var users = _userRepository.GetAll();
             return _mapper.Map<IEnumerable<User>,IEnumerable<UserDto>>(users);
         }
+
+        public void Register(string email, string password)
+        {
+            var user = _userRepository.Get(email);
+
+            if(user != null)
+            {
+                throw new Exception($"User with {email} already exist.");
+            }
+
+            user = new User(email, password);
+            _userRepository.Add(user);
+        }
     }
 }
