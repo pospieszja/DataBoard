@@ -10,12 +10,6 @@ namespace DataBoard.Infrastructure.Repositories
     {
         private readonly DataboardContext _context;
 
-        // private static ISet<User> _users = new HashSet<User>
-        // {
-        //     new User("user1email.com", "secret"),
-        //     new User("user2@email.com", "secret"),
-        //     new User("user3@email.com", "secret")
-        // };
         public UserRepository(DataboardContext context)
         {
             _context = context;
@@ -33,7 +27,7 @@ namespace DataBoard.Infrastructure.Repositories
 
         public User Get(string email)
         {
-            return _context.Users.FirstOrDefault();
+            return _context.Users.SingleOrDefault(u => u.Email == email);
         }
 
         public IEnumerable<User> GetAll()
