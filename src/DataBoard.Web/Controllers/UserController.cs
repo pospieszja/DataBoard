@@ -16,12 +16,6 @@ namespace DataBoard.Web.Controllers
         public JsonResult GetUsers()
         {
             return Json(_userService.GetAll());
-            // return new JsonResult(new List<object>()
-            // {
-            //     new {id=1, name="Jacek"},
-            //     new {id=2, name="Placek"},
-            // });
         }
-        
     }
 }
