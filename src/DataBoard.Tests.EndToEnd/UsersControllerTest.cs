@@ -54,14 +54,13 @@ namespace DataBoard.Tests.EndToEnd
         public async Task given_unique_email_user_should_be_created()
         {
             var command = new CreateUser();
-            command.Email = "user888@mail.com";
+            command.Email = "user999@mail.com";
             command.Password = "secret";
 
             var payload = new JsonContent(command);
             var response = await _client.PostAsync("users/", payload);
 
             Assert.Equal(HttpStatusCode.Created, response.StatusCode);
-
             Assert.Equal(response.Headers.Location.ToString(), $"/users/{command.Email}");
         }
     }

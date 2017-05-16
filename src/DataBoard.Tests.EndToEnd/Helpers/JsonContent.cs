@@ -10,6 +10,5 @@ namespace DataBoard.Tests.EndToEnd.Helpers
         {
 
         }
-
     }
 }
