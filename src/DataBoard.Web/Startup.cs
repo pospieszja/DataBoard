@@ -34,7 +34,8 @@ namespace DataBoard.Web
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataboardContext>(options => options.UseSqlServer("Data Source=localhost;Database=Databoard;User ID=sa;Password=4BEsFpaq"));
+            var connectionString = Configuration["ConnectionStrings:DefaultConnection"];
+            services.AddDbContext<DataboardContext>(options => options.UseSqlServer(connectionString));
             services.AddScoped<IUserRepository, UserRepository>();
             services.AddScoped<IUserService, UserService>();
             services.AddSingleton(AutoMapperConfig.Initialize());
