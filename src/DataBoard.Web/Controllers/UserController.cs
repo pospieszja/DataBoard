@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DataBoard.Web.Controllers
 {
-    [Route("/users")]
+    [Route("api/users")]
     public class UserController : Controller
     {
         private readonly IUserService _userService;
